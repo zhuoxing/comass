@@ -549,7 +549,8 @@ body{
     font-size: 16px; 
     line-height: 26px; 
     font-family:Helvetica, Arial, Verdana, sans-serif; 
-    text-align: center;  
+    text-align: center; 
+    margin:0; 
 }
 /*网页首页主要部分样式*/
 
