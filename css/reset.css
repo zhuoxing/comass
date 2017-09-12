@@ -1,0 +1,62 @@
+/*样式重置*/
+body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,form,input,textarea,th,td,select{margin: 0; padding: 0;}
+li{ list-style: none;}
+a{ text-decoration: none !important;}
+img{border:0; display:block;}
+.left{ float: left;}
+.right{ float:right;}
+body{ font-size: 14px;line-height: 1.625;color: #8a8a8a;}
+b,strong{font-weight: bold;}
+input,textarea{
+    border-radius: 0 !important;
+}
+/*样式重置*/
+
+/* 清除浮动*/
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0} 
+.clearfloat{zoom:1}
+/* 清除浮动*/
+
+#header,#topBar,#footer,.main_content,.about_us,.service{width: 100%;}
+#topLink,.searchBox,.navBox,.footer_inner,#banner,.quality_box,.category_inner,#breadcrumbs_box,.reg_main_content,.box_innner,.about_us_inner,.contact_us_inner,
+.service_inner,.pcb-service{width:82%;margin:0 auto;}
+
+
+/*自定义公用样式*/
+.dbl{
+    display: block;
+}
+.mr-10{
+    margin-right: 10px;
+}
+
+.ml-10{
+    margin-left: 10px; 
+}
+
+.mr-25{
+    margin-right: 25px;
+}
+
+.ml-25{
+    margin-left: 25px; 
+}
+
+.padl-40{
+    padding-left: 40px;
+}
+
+.pad-top-10{
+    padding-top: 10px;
+}
+/* .padding_all{
+    padding:30px 20px 40px 20px;
+} */
+.col-center-block {  
+    float: none;  
+    display: block;  
+    margin-left: auto;  
+    margin-right: auto;  
+}
+
+/*自定义公用样式*/

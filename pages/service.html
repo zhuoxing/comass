@@ -1,0 +1,83 @@
+<div class="service" ng-controller="serviceController">
+    <div id="breadcrumbs_box">
+        <a ui-sref="home"><i class="fa fa-home"></i></a> / 
+        <a ui-sref="">service</a>
+    </div>
+    <div class="service_inner">
+        <div class="row">
+            <div class="categories_list col-lg-3 col-md-3 col-sm-12 sidebar col-xs-12">
+                <h4 class="categories_title">Categories</h4>
+                <div class="categories_manu">
+                    <ul>
+                        <li><a href="">Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service_main col-md-9 col-sm-12 col-xs-12">
+                <div class="products_header">
+                    <div class="inner clearfloat">
+                        <div class="display col-lg-2 col-md-2 col-sm-2 hidden-xs clearfloat">
+                            <button ng-class="{'active':!isActive}" ng-click="list()"><i class="fa fa-list"></i></button>
+                            <button ng-class="{'active':isActive}" ng-click="grid()"><i class="fa fa-th"></i></button>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 clearfloat">
+                            <div class="product_compare col-lg-3 col-md-3 col-sm-3 col-xs-12 pull-right">
+                                <a href="">Product Compare (0)</a>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">
+                                <span>order by: </span>
+                                <select class="orderBy_option">
+                                    <option>Name (A - Z)</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">
+                                <span>show</span>
+                                <select class="show_option">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prodcuts_box clearfloat">
+                    <div class="product_option left">
+                       <img src="./images/pcb-500x500.jpg">
+                       <div class="position_left">
+                          <button><i class="fa fa-exchange"></i></button>
+                          <button>
+                            <i class="fa fa-arrows-alt"></i>
+                          </button>
+                       </div>
+                       <div class="position_right">
+                           <button><i class="fa fa-heart"></i></button>
+                           <button><i class="fa fa-search-plus"></i></button>
+                       </div>
+                    </div>
+                    <div class="product_info_list right" ng-hide="!isHidden">
+                       <h6><a href="">Quick PCB Service</a></h6>
+                       <p class="product_discribe">
+                          The way for the makers& startups to get the PCBs for prototyping or trial-production, with low p.....
+                       </p>
+                       <p class="product_price"><span>$5.00</span></p>
+                       <p class="product_action">
+                           <button>Add to Cart</button>
+                       </p>
+                    </div>
+                   <div class="product_info_bottom" ng-hide="isHidden">
+                        <h6><a href="">Quick PCB Service</a></h6>
+                        <p class="product_price"><span>$5.00</span></p>
+                        <p class="product_action">
+                            <button>Add to Cart</button>
+                        </p>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

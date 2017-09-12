@@ -1,0 +1,106 @@
+ <div id="header">
+    <div id="topBar">
+        <div id="topLink" class="clearfloat">
+            <div class="left">
+                <a ui-sref="register" title="">Register</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a ui-sref="login" title="">Login</a>
+            </div>
+            <div class="right">
+                <div class="btn-group" uib-dropdown is-open="status.isopen">
+                    <button id="single-button" type="button" class="btn btn-info" uib-dropdown-toggle ng-disabled="disabled">
+                        <span class="fa fa-cog"></span>
+                        setting
+                        <span class="fa fa-angle-down"></span>
+                    </button>
+                    <ul class="dropdown-menu setting-dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                        <li role="menuitem">
+                            <a href="#"><i class="fa fa-user"></i> My Account</a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#"><i class="fa fa-list-alt"></i> With List</a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#"><i class="fa fa-bookmark"></i> Shopping Cart</a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#"><i class="fa fa-share"></i> Checkout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="searchBox">
+        <div class="row clearfloat">
+            <div class="logoBox inner col-lg-3 col-md-2 col-sm-3 col-xs-12">
+                <a href="#">
+                    <img src="./images/logo.png" title="Comaas" alt="Comaas">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-5 col-xs-8 clearfloat">
+                <div class="input-group clearfloat">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="inner col-lg-4 col-md-5 col-sm-4 col-xs-4 col-lg-offset-1 col-md-offset-1 clearfloat">
+                <div class="linkBox pull-left   ">
+                    <h3 class="contact">
+                        <span class="">CONTACT US NOW</span>
+                        <a href="" class="link_adrress">info@comaas.cc</a>
+                    </h3>
+                </div>
+                <div class="myCart pull-right">
+                    <h3 class="right ml-10">
+                        <p>MY CART</p>
+                        <div class="cart_info">
+                            <span>0 item(s) - $0.00</span>&nbsp;
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                    </h3>
+                  <span class="fa fa-shopping-cart right"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navBox">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-0 col-xs-0"></div>
+            <div class="nav-center col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <ul class="nav nav-tabs">
+                    <li>
+                        <a ui-sref="home">HOME</a>
+                    </li>
+                    <li>
+                        <a ui-sref="about-us">ABOUT US</a>
+                    </li>
+                    <li class="service-dropdown el-submenu-title">
+                        <a ui-sref="service" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            SERVICES<span class="fa fa-angle-down ml-10"></span>
+                            <span class="hot_badge">HOT</span>
+                        </a>
+                        <ul class="service-dropdown-menu">
+                            <li><a ui-sref="PCB-service">Quick PCB</a></li>
+                            <li><a href="#">Manufacturing Service</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">QUALITY</a>
+                    </li>
+                    <li>
+                        <a href="#">PROJECTS</a>
+                    </li>
+                    <li>
+                        <a ui-sref="contact-us">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</div>
