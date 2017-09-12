@@ -19,7 +19,7 @@ input,textarea{
 
 #header,#topBar,#footer,.main_content,.about_us,.service{width: 100%;}
 #topLink,.searchBox,.navBox,.footer_inner,#banner,.quality_box,.category_inner,#breadcrumbs_box,.reg_main_content,.box_innner,.about_us_inner,.contact_us_inner,
-.service_inner,.pcb-service{width:82%;margin:0 auto;}
+.service_inner,.pcb-service,.electronic-service{width:82%;margin:0 auto;}
 
 
 /*自定义公用样式*/

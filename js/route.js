@@ -125,6 +125,27 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRo
                     insertBefore: '#ng_load_plugins_before',
                     files: [
                         'js/controllers/PCB-Controller.js',
+                        'lib/js/ng-file-upload-shim.js',
+                        'lib/js/ng-file-upload.js'
+                    ]
+                });
+            }]
+        }
+    }).state('electronic-service',{
+        url: "/home/electronic-service",
+        templateUrl: "./pages/electronic-service.html",
+        data: {
+            pageTitle: 'electronic-service'
+        },
+        controller: "electronic-Controller",
+        resolve: {
+            deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                return $ocLazyLoad.load({
+                    name: 'myApp',
+                    insertBefore: '#ng_load_plugins_before',
+                    files: [
+                        'js/controllers/electronic-Controller.js',
+                        'lib/css/ng-table.min.css',
                     ]
                 });
             }]

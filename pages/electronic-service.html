@@ -1,0 +1,84 @@
+<div class="electronic-service">
+    <div class="service-production">
+        <h1>Electronic Manufacturing Service</h1>
+        <div class="service-text"></div>
+    </div>
+    <div class="file-option">
+        <div class="row">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="" class="col-sm-3 control-label">Your Project Type:</label>
+                    <div class="col-sm-9">
+                        <select>
+                            <option value="Home automation">Home automation</option>
+                            <option value="IoT">IoT</option><option value="Robotics">Robotics</option>
+                            <option value="Education">Education</option>
+                            <option value="Medical">Medical</option>
+                            <option value="Network">Network</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-3 control-label">Have Engineering Sample:</label>
+                    <div class="col-sm-9">
+                        <input type="radio">yes
+                        <input type="radio">no
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-3 control-label">Upload BOM</label>
+                    <div class="col-sm-9">
+                        <input type="file" ngf-select ng-model="picFile" name="file" accept="image/*/doc/*/zip/*" ngf-max-size="2MB" required ngf-model-invalid="errorFile">
+                        <i ng-show="myForm.file.$error.required">*required</i><br>
+                        <a href="">BOM file template</a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        You can upload other files like product pictures, test plan, etc.you think necessary with your description,
+                        that will make the quotation more fast and accurate
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <table class="product-table">
+                            <tr>
+                                <th width=60% >discription</th>
+                                <th width=20% >upload file</th>
+                                <th width=20%>Options</th>
+                            </tr>
+
+                            <tr ng-repeat="item in items" ng-controller="row">
+                                <td>
+                                    <input type="text" ng-model="item.name" ng-readonly="varlist.isreadonly" value={ {item.name}} ng-class="{true:'inactive',false:'active'}[varlist.isreadonly]" placeholder="name">
+                                </td>
+                                <td>
+                                   <input type="file" ngf-select ng-model="picFile" name="file" accept="image/*/doc/*/zip/*" ngf-max-size="2MB" required ngf-model-invalid="errorFile">
+                                </td>
+                                <td class="options">
+                                    <!-- 编辑 -->
+                                    <edit></edit>
+                                    <!-- 删除当前行 -->
+                                    <delete></delete>
+                                    <!-- 放弃所有编辑 -->
+                                    <reset></reset>
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- 增加一行 -->
+                                <td colspan="5">
+                                    <add></add>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12" class="btn_box">
+                        <button type="submit">submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
