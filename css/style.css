@@ -982,6 +982,56 @@ h1, .h1, h2, .h2, h3, .h3 {
 } */
 /*electronic-service*/
 
+/*项目 projects*/
+.projects{
+    margin-top: 20px;
+}
+.projects .submanu-list ul li{
+    padding: 5px 0;
+    border:solid 1px #dfdfdf;
+    margin-bottom: -1px;
+    text-align: center;
+}
+
+.projects .submanu-list ul li:hover{
+    background: #34a6f7;
+}
+
+.submanu-list ul li:hover a{
+    color: #ffffff;
+}
+
+.submanu-list h3{
+    font-size: 16px;
+    height: 26px;
+    line-height: 26px;
+    margin:0;
+    text-align: center;
+    font-weight: bold;
+}
+.projects .submanu-list a{
+    color: #000000;
+}
+.projects .projects-box{
+    border:solid 1px #dfdfdf;
+}
+
+.projects-box img{
+    width: 100%;
+}
+.project_name{
+    text-align: center;
+    background: #34a6f7;
+    color: #ffffff;
+    padding: 20px 0;
+}
+.project_name h3{
+    font-size: 16px;
+    margin:0;
+    line-height: 26px;
+    height: 26px;
+}
+/*项目 projects*/
 /*联系我们*/
 .contact_us h3{
     color:#000000;

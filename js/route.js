@@ -150,5 +150,24 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRo
                 });
             }]
         }
+    }).state('projects',{
+        url: "/home/projects",
+        templateUrl: "./pages/projects.html",
+        data: {
+            pageTitle: 'projects'
+        },
+        controller: "projectsController",
+        resolve: {
+            deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                return $ocLazyLoad.load({
+                    name: 'myApp',
+                    insertBefore: '#ng_load_plugins_before',
+                    files: [
+                        'js/controllers/projectsController.js',
+                        'lib/css/ng-table.min.css',
+                    ]
+                });
+            }]
+        }
     })
 }])
