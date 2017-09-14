@@ -185,7 +185,7 @@ body{
     position: relative;
 }
 .service-dropdown-menu{
-    /*display: none;*/
+    display: none;
     opacity: 0;
     position: absolute;
     top: 70px;
@@ -194,13 +194,14 @@ body{
     z-index: 999;
     background: #ffffff;
     border-top:2px solid #00a9e0;
-    transition:top 0.5s;
-    -webkit-transition:top 0.5s;
-    -moz-transition:top 0.5s;
-    -ms-transition:top 0.5s;
-    -o-transition:top 0.5s; 
+    transition:all 0.5s;
+    -webkit-transition:all 0.5s;
+    -moz-transition:all 0.5s;
+    -ms-transition:all 0.5s;
+    -o-transition:all 0.5s; 
 }
 .el-submenu-title:hover .service-dropdown-menu{
+    display: block;
     opacity:1;
     top: 50px;
 }
@@ -986,14 +987,16 @@ h1, .h1, h2, .h2, h3, .h3 {
 .projects{
     margin-top: 20px;
 }
-.projects .submanu-list ul li{
+.projects .submanu-list ul li,.myAccount .submanu-list ul li{
     padding: 5px 0;
     border:solid 1px #dfdfdf;
     margin-bottom: -1px;
     text-align: center;
 }
-
-.projects .submanu-list ul li:hover{
+.submanu-list ul li a{
+    display: block;
+}
+.projects .submanu-list ul li:hover,.myAccount .submanu-list ul li:hover{
     background: #34a6f7;
 }
 
@@ -1016,7 +1019,7 @@ h1, .h1, h2, .h2, h3, .h3 {
     border:solid 1px #dfdfdf;
 }
 
-.projects-box img{
+.projects-box img,.project_brief img{
     width: 100%;
 }
 .project_name{
@@ -1031,7 +1034,20 @@ h1, .h1, h2, .h2, h3, .h3 {
     line-height: 26px;
     height: 26px;
 }
+
+.project_brief,.project_text{
+    border:solid 1px #dfdfdf;
+    text-align: center;
+}
 /*项目 projects*/
+
+/*quality*/
+.quality-text{
+    margin-top: 20px;
+    text-align: center;
+    border:solid 1px #dfdfdf;
+}
+/*quality*/
 /*联系我们*/
 .contact_us h3{
     color:#000000;

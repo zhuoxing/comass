@@ -150,7 +150,11 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRo
                 });
             }]
         }
-    }).state('projects',{
+    }).state('projectsSideManu',{
+        url: "/home/projectsSideManu",
+        templateUrl: "./view/projectsSideManu.html",
+
+    }).state('projectsSideManu.projects',{
         url: "/home/projects",
         templateUrl: "./pages/projects.html",
         data: {
@@ -164,7 +168,100 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRo
                     insertBefore: '#ng_load_plugins_before',
                     files: [
                         'js/controllers/projectsController.js',
-                        'lib/css/ng-table.min.css',
+                    ]
+                });
+            }]
+        }
+    }).state('projectsSideManu.projcetDetail',{
+        url: "/home/projcetDetail",
+        templateUrl: "./pages/projcetDetail.html",
+        data: {
+            pageTitle: 'projcetDetail'
+        },
+        controller: "projcetDetailController",
+        resolve: {
+            deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                return $ocLazyLoad.load({
+                    name: 'myApp',
+                    insertBefore: '#ng_load_plugins_before',
+                    files: [
+                        'js/controllers/projcetDetailController.js',
+                    ]
+                });
+            }]
+        }
+    }).state('quality',{
+        url: "/home/quality",
+        templateUrl: "./pages/quality.html",
+        data: {
+            pageTitle: 'quality'
+        },
+        controller: "qualityController",
+        resolve: {
+            deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                return $ocLazyLoad.load({
+                    name: 'myApp',
+                    insertBefore: '#ng_load_plugins_before',
+                    files: [
+                        'js/controllers/qualityController.js',
+                    ]
+                });
+            }]
+        }
+    }).state('myAccount',{
+        url: "/home/myAccount",
+        templateUrl: "./view/myAccount.html"
+
+    }).state('myAccount.cart',{
+        url: "/home/cart",
+        templateUrl: "./pages/cart.html",
+        data: {
+            pageTitle: 'cart'
+        },
+        controller: "cartController",
+        resolve: {
+            deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                return $ocLazyLoad.load({
+                    name: 'myApp',
+                    insertBefore: '#ng_load_plugins_before',
+                    files: [
+                        'js/controllers/cartController.js',
+                    ]
+                });
+            }]
+        }
+    }).state('myAccount.orders',{
+        url: "/home/orders",
+        templateUrl: "./pages/orders.html",
+        data: {
+            pageTitle: 'orders'
+        },
+        controller: "ordersController",
+        resolve: {
+            deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                return $ocLazyLoad.load({
+                    name: 'myApp',
+                    insertBefore: '#ng_load_plugins_before',
+                    files: [
+                        'js/controllers/ordersController.js',
+                    ]
+                });
+            }]
+        }
+    }).state('myAccount.messages',{
+        url: "/home/messages",
+        templateUrl: "./pages/messages.html",
+        data: {
+            pageTitle: 'messages'
+        },
+        controller: "messagesController",
+        resolve: {
+            deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                return $ocLazyLoad.load({
+                    name: 'myApp',
+                    insertBefore: '#ng_load_plugins_before',
+                    files: [
+                        'js/controllers/messagesController.js',
                     ]
                 });
             }]
