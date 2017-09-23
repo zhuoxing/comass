@@ -1,34 +1,44 @@
-<div class="orders">
+<div class="my_project">
     <p>welcome to .....</p>
-    <h3>My Orders</h3>
+    <h3>My Project</h3>
     <table class="product-table">
         <tr>
-            <th width=20%>Order No</th>
-            <th width=20%>Description</th>
-            <th width=20%>Order Date</th>
-            <th width=20%>Status</th>
-            <th width=20%>Total</th>
+            <th width=10%>Project No</th>
+            <th width=10%>Project Name</th>
+            <th width=20%>Project Descrption</th>
+            <th width=10%>Project Manage</th>
+            <th width=10%>Status</th>
+            <th width=10%>ETD/ATD</th>
+            <th width=10%>Payment Status</th>
         </tr>
 
         <tr ng-repeat="item in items" ng-controller="row">
             <td>
                 <!-- <input type="text" ng-model="item.Item" ng-readonly="varlist.isreadonly" value={{item.Item}} ng-class="{true:'inactive',false:'active'}[varlist.isreadonly]" placeholder="name"> -->
-                {{item.OrderNo}}
+                <a ui-sref="myAccount.projectDetail">{{item.No}}</a>
             </td>
             <td>
                <!-- <input type="text" ng-model="item.Qty" ng-readonly="varlist.isreadonly" value={ {item.Qty}} ng-class="{true:'inactive',false:'active'}[varlist.isreadonly]" placeholder="name"> -->
-               {{item.Description}}
+               {{item.Name}}
             </td>
             <td>
                <!-- <input type="text" ng-model="item.Attr" ng-readonly="varlist.isreadonly" value={ {item.Attr}} ng-class="{true:'inactive',false:'active'}[varlist.isreadonly]" placeholder="name"> -->
-               {{item.OrderDate}}
+               {{item.Discription}}
+            </td>
+            <td>
+               <!-- <input type="text" ng-model="item.Price" ng-readonly="varlist.isreadonly" value={ {item.Price}} ng-class="{true:'inactive',false:'active'}[varlist.isreadonly]" placeholder="name"> -->
+               {{item.Manager}}
             </td>
             <td>
                <!-- <input type="text" ng-model="item.Price" ng-readonly="varlist.isreadonly" value={ {item.Price}} ng-class="{true:'inactive',false:'active'}[varlist.isreadonly]" placeholder="name"> -->
                {{item.Status}}
             </td>
+            <td>
+               <!-- <input type="text" ng-model="item.Price" ng-readonly="varlist.isreadonly" value={ {item.Price}} ng-class="{true:'inactive',false:'active'}[varlist.isreadonly]" placeholder="name"> -->
+               {{item.etd_atd}}
+            </td>
             <td class="options">
-                {{item.total}}
+                {{item.pay_status}}
             </td>
         </tr>
     </table>

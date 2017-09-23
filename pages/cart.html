@@ -1,3 +1,32 @@
 <div class="cart">
-    welcome to .....
+    <p>welcome to .....</p>
+    <h3>My Cart</h3>
+    <table class="product-table">
+        <tr>
+            <th width=20%>Item</th>
+            <th width=20%>Qty</th>
+            <th width=20%>Attr</th>
+            <th width=20%>Price</th>
+            <th width=20%>Action</th>
+        </tr>
+
+        <tr ng-repeat="item in items" ng-controller="row">
+            <td>
+                <input type="text" ng-model="item.Item" ng-readonly="varlist.isreadonly" value={ {item.Item}} ng-class="{true:'inactive',false:'active'}[varlist.isreadonly]" placeholder="name">
+            </td>
+            <td>
+               <input type="text" ng-model="item.Qty" ng-readonly="varlist.isreadonly" value={ {item.Qty}} ng-class="{true:'inactive',false:'active'}[varlist.isreadonly]" placeholder="name">
+            </td>
+            <td>
+               <input type="text" ng-model="item.Attr" ng-readonly="varlist.isreadonly" value={ {item.Attr}} ng-class="{true:'inactive',false:'active'}[varlist.isreadonly]" placeholder="name">
+            </td>
+            <td>
+               <input type="text" ng-model="item.Price" ng-readonly="varlist.isreadonly" value={ {item.Price}} ng-class="{true:'inactive',false:'active'}[varlist.isreadonly]" placeholder="name">
+            </td>
+            <td class="options">
+                <!-- 删除当前行 -->
+                <delete></delete>
+            </td>
+        </tr>
+    </table>
 </div>

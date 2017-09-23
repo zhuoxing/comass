@@ -21,7 +21,7 @@
                             <a ui-sref="myAccount.orders">Orders</a>
                         </li>
                         <li role="menuitem">
-                            <a ui-sref="#">projects</a>
+                            <a ui-sref="myAccount.myProjects">projects</a>
                         </li>
                         <li role="menuitem">
                             <a ui-sref="myAccount.messages">messages</a>
@@ -102,5 +102,9 @@
             </div>
             
         </div>
+    </div>
+    <div id="breadcrumbs_box" ng-hide="indexUrl == url">
+        <a ui-sref="home"><i class="fa fa-home"></i></a> / 
+        <a ui-sref="url">{{url}}</a>
     </div>
 </div>

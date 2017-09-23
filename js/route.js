@@ -172,20 +172,20 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRo
                 });
             }]
         }
-    }).state('projectsSideManu.projcetDetail',{
-        url: "/home/projcetDetail",
-        templateUrl: "./pages/projcetDetail.html",
+    }).state('projectsSideManu.projectInfo',{
+        url: "/home/projectInfo",
+        templateUrl: "./pages/projcetInfo.html",
         data: {
-            pageTitle: 'projcetDetail'
+            pageTitle: 'projectInfo'
         },
-        controller: "projcetDetailController",
+        controller: "projectInfoController",
         resolve: {
             deps: ['$ocLazyLoad', function($ocLazyLoad) {
                 return $ocLazyLoad.load({
                     name: 'myApp',
                     insertBefore: '#ng_load_plugins_before',
                     files: [
-                        'js/controllers/projcetDetailController.js',
+                        'js/controllers/projectInfoController.js',
                     ]
                 });
             }]
@@ -266,5 +266,42 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRo
                 });
             }]
         }
+    }).state('myAccount.myProjects',{
+        url: "/home/myProjects",
+        templateUrl: "./pages/myProjects.html",
+        data: {
+            pageTitle: 'myProjects'
+        },
+        controller: "myProjectsController",
+        resolve: {
+            deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                return $ocLazyLoad.load({
+                    name: 'myApp',
+                    insertBefore: '#ng_load_plugins_before',
+                    files: [
+                        'js/controllers/myProjectsController.js',
+                    ]
+                });
+            }]
+        }
+    }).state('myAccount.projectDetail',{
+        url: "/home/projectDetail",
+        templateUrl: "./pages/projectDetail.html",
+        data: {
+            pageTitle: 'myProjects'
+        },
+        controller: "projectDetailController",
+        resolve: {
+            deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                return $ocLazyLoad.load({
+                    name: 'myApp',
+                    insertBefore: '#ng_load_plugins_before',
+                    files: [
+                        'js/controllers/projectDetailController.js',
+                    ]
+                });
+            }]
+        }
     })
 }])
+

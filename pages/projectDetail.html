@@ -1,0 +1,71 @@
+<div class="my_project_detail">
+    <div>
+        <h3 class="title">Project Detail</h3>
+        <form class="my_project_form">
+            <div class="row">
+                <div class="form-group col-sm-4">
+                    <label>Project No</label>
+                    <input type="text">
+                </div>
+                 <div class="form-group col-sm-4">
+                    <label>Project No</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label>Project No</label>
+                    <input type="text">
+                </div>
+            </div>
+             <div class="form-group clearfloat">
+                <label>Project Description</label>
+                <textarea></textarea>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-4">
+                    <label>Project Type</label>
+                    <input type="text">
+                </div>
+                 <div class="form-group col-sm-4">
+                    <label>Project Manager</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label>Status</label>
+                    <input type="text">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div>
+        <h3 class="title">Project Info</h3>
+        <table class="product-table">
+            <tr>
+                <th width=20%>Item</th>
+                <th width=20%>Attachment</th>
+                <th width=20%>Last Update</th>
+                <th width=15%>Current Version</th>
+                <th width=20%>Status</th>
+                <th width=5%>Action</th>
+            </tr>
+            <tr ng-repeat="item in items">
+                <td>
+                    {{item.Item}}
+                </td>
+                <td>
+                   {{item.Attachment}}
+                </td>
+                <td>
+                   {{item.LastUpdate}}
+                </td>
+                <td>
+                   {{item.Version}}
+                </td>
+                <td>
+                   {{item.Status}}
+                </td>
+                <td class="options">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

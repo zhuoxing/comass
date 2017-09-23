@@ -1,9 +1,14 @@
-angular.module('myApp').controller('messagesController',function($scope){
+
+angular.module('myApp').controller('myProjectsController',function($scope){
      // 数据源
     $scope.items = [{
-        MessageType: "Order Message",
-        Time: '2017-09-01 20:10',
-        Content:"You order(No. xxxx) delivered......",
+        No: "P17081101",
+        Name: "Home IoT toolkits",
+        Discription:"A toolkit for traditional appliance....",
+        Manager:"Lieo",
+        Status:"WIP(DIP)",
+        etd_atd:"2017-12-01/NA",
+        pay_status:"$1,000($800)"
     }];
     // 为 reset功能而做的准备，ng中数组的复制，注意使用 angular.copy()和不使用的效果
     $scope.resetArr = angular.copy($scope.items);
@@ -17,4 +22,4 @@ angular.module('myApp').controller('messagesController',function($scope){
     $scope.varlist = {
         isreadonly: true
     }
-});
+})  

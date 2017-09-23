@@ -1,1 +1,25 @@
-<div class="messages">messages.html</div>
+<div class="messages">
+    <p>welcome to .....</p>
+    <h3>Messages</h3>
+    <table class="product-table">
+        <tr>
+            <th width=33%>Message Type</th>
+            <th width=33%>Time</th>
+            <th width=33%>Content</th>
+        </tr>
+
+        <tr ng-repeat="item in items" ng-controller="row">
+            <td>
+                <!-- <input type="text" ng-model="item.Item" ng-readonly="varlist.isreadonly" value={{item.Item}} ng-class="{true:'inactive',false:'active'}[varlist.isreadonly]" placeholder="name"> -->
+                {{item.MessageType}}
+            </td>
+            <td>
+               <!-- <input type="text" ng-model="item.Qty" ng-readonly="varlist.isreadonly" value={ {item.Qty}} ng-class="{true:'inactive',false:'active'}[varlist.isreadonly]" placeholder="name"> -->
+               {{item.Time}}
+            </td>
+            <td class="options">
+                {{item.Content}}
+            </td>
+        </tr>
+    </table>
+</div>

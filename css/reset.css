@@ -69,4 +69,8 @@ input,textarea{
     margin-top: 26px;
 }
 
+
+.clearboth{
+    clear: both;
+}
 /*自定义公用样式*/
